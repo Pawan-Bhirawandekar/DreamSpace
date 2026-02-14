@@ -1,0 +1,126 @@
+.footer {
+  width: 100%;
+  background-color: #282828;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Places content side by side */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensures it wraps for smaller screens */
+  gap: 20px; /* Adds space between the sections */
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-easyAccess {
+  flex: 1; /* Ensures equal width for each section */
+  max-width: 400px; /* Restricts the width of each section */
+}
+
+.footer-about h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f4a261;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-links h3 {
+  color: #f4a261;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+}
+
+.footer-contact h3 {
+  color: #f4a261;
+}
+
+.footer-easyAccess h3 {
+  color: #f4a261;
+}
+
+.footer-easyAccess p {
+  margin: 8px 0;
+}
+
+.footer-easyAccess ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-easyAccess ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-easyAccess ul{
+  list-style-type: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  transform: rotate(-2.5deg);
+  padding-left: 0%;
+  padding-top: 0%;
+  margin-bottom: 10px;
+}
+
+.footer-easyAccess {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Ensure the footer items do not overlap on smaller screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-easyAccess {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #ffffff; /* Match the text color */
+}
+
+.footer-contact a:hover {
+  text-decoration: none; /* Ensure no underline appears on hover */
+}

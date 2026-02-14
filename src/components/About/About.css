@@ -1,0 +1,60 @@
+ .about {
+    margin: 50px auto;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially moved down */
+    transition: all 0.8s ease-in-out; /* Smooth transition for visibility and movement */
+}
+
+.about.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to original position */
+}
+
+.about-left {
+    flex-basis: 40%;
+    transform: translateX(-100%); /* Initially off-screen to the left */
+    transition: transform 1s ease-in-out 0.3s; /* Delayed slide-in effect */
+}
+
+.about-right {
+    flex-basis: 55%;
+    transform: translateX(100%); /* Initially off-screen to the right */
+    transition: transform 1s ease-in-out 0.5s; /* Delayed slide-in effect */
+}
+
+.about.visible .about-left {
+    transform: translateX(0); /* Slides into place */
+}
+
+.about.visible .about-right {
+    transform: translateX(0); /* Slides into place */
+}
+
+.aboutimg {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 10px rgba(73, 73, 73, 0.3);
+    transition: transform 0.3s;
+}
+
+.aboutimg:hover {
+    transform: scale(1.1);
+}
+
+.about h2 {
+    margin: 10px 0;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+.about-right p {
+    font-size: 18px;
+    text-align: justify;
+}

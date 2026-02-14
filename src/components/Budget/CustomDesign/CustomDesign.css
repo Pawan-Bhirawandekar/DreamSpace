@@ -1,0 +1,151 @@
+/* Main container for the entire layout */
+.custom-design-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 90%;
+    gap: 10px; /* Add some space between the image and form */
+    margin: 0 auto;
+}
+
+/* Left side image container */
+.budget-image-container {
+    flex: 1;
+    background-image: url("C:/Users/pc/Pawan/TYBScIT/Project Implementation/DreamSpace/src/assets/customPerson-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80%; /* Reduce height to avoid scrolling */
+}
+
+/* Right side form container */
+.form-container {
+    flex: 1;
+    padding: 15px 20px; /* Reduce padding */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px; /* Reduce width */
+    height: 80%; /* Reduce height to fit in view */
+}
+
+/* Animated text styling */
+.animated-text {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.animated-text .highlight {
+    color: #023e8a;
+    font-weight: bold;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.5em;
+    background-color: #023e8a;
+    animation: blink 0.5s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    background-color: #e9ecef;
+    padding: 10px; /* Reduce padding */
+    border: 0;
+    outline: 0;
+    border-radius: 8px; /* Slightly smaller radius */
+    resize: none;
+    margin-top: 8px; /* Adjust spacing */
+    margin-bottom: 12px;
+}
+
+/* Submit button */
+.btn {
+    font-size: 18px; /* Slightly smaller font */
+    border-radius: 20px;
+    padding: 8px; /* Reduce padding */
+    background-color: #6c757d;
+    color: white;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.10s;
+}
+
+.btn:hover {
+    background-color: #495057;
+}
+
+/* Headers */
+.heading-custom {
+    font-size: 24px; /* Reduce font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.header-customDesign {
+    font-size: 14px; /* Slightly smaller text */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Result message */
+form span {
+    display: block;
+    margin-top: 10px; /* Reduce margin */
+    text-align: center;
+    color: green;
+}
+
+
+@media (min-width: 768px) {
+    .custom-design-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .form-container {
+        width: 50%; /* Reduce width for larger screens */
+        margin: 20px;
+    }
+
+    .animated-text {
+        font-size: 28px; /* Slightly larger text */
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-container {
+        padding: 40px; /* Add extra padding for large screens */
+    }
+
+    .animated-text {
+        font-size: 32px; /* Larger font size for larger screens */
+    }
+
+    .btn {
+        font-size: 18px; /* Bigger buttons */
+    }
+}

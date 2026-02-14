@@ -1,0 +1,139 @@
+/* General Styling */
+.services {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Add uniform spacing */
+    font-size: 18px;
+    margin-bottom: 0;
+    
+}
+
+.naming {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.desc {
+    flex-basis: 35%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+
+.service {
+    width: 250px; /* Fixed width for consistency */
+    height: 250px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px; /* Spacing between items */
+    border-radius: 50%;
+    overflow: hidden; /* Hide overflow for clean design */
+    background: #f0f0f0; /* Default background in case of missing images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animation on Hover */
+.service:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: float 1.5s ease-in-out infinite; /* Float effect */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Starting and ending position */
+    }
+    50% {
+        transform: translateY(-10px); /* Float upward */
+    }
+}
+
+.service img {
+    width: 100%; /* Fill the container */
+    height: 100%; /* Maintain equal size */
+    object-fit: cover; /* Ensure images cover the container proportionally */
+    border-radius: 50%; /* Keep images circular */
+}
+
+.caption {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 20, 20, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.service:hover .caption {
+    opacity: 1; /* Show caption on hover */
+    transform: scale(1.1); /* Slightly enlarge the caption */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .service {
+        width: 200px; /* Adjust size for tablets */
+        height: 200px;
+    }
+
+    .caption {
+        font-size: 16px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .service {
+        width: 180px; /* Adjust size for smaller devices */
+        height: 180px;
+    }
+
+    .caption {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .service {
+        width: 150px; /* Smaller size for very small screens */
+        height: 150px;
+    }
+
+    .caption {
+        font-size: 12px;
+    }
+}
